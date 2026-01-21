@@ -1,26 +1,32 @@
 # Substack Profile Scraper
 
-A simple automation tool to scrape user profiles and social links from Substack's explore page.
+A fast automation tool to scrape user profiles and social links from Substack leaderboards with concurrent processing and live dashboard.
 
-## What It Does
+## Quick Start
 
-1. Opens Substack's explore page
-2. Scrolls to load more profiles
-3. Opens each user profile
-4. Gets their subscriber count and social media links
-5. Saves everything to a CSV file
+```bash
+./start.sh
+```
 
-## Requirements
+This single command will:
+1. Start the live dashboard server at http://localhost:8080
+2. Open the dashboard in your browser
+3. Run the scraper with concurrent batch processing
+4. Save results to `substack_profiles.csv`
 
-- Python 3.8+
-- Playwright browser automation library
+## Features
+
+- ⚡ **Concurrent Scraping** - Processes up to 100 profiles in parallel
+- 📊 **Live Dashboard** - Real-time updates at http://localhost:8080
+- 🏷️ **Category Labels** - Profiles organized by category (Technology, Culture, etc.)
+- 🔄 **Resume Support** - Skips already scraped profiles on restart
+- 📁 **Multiple Leaderboards** - Scrapes from 11 category pages
 
 ## Setup
 
-### 1. Create a virtual environment (optional but recommended)
+### 1. Create virtual environment
 
 ```bash
-cd /Users/aadi/Documents/automated_testing
 python -m venv venv
 source venv/bin/activate
 ```
@@ -32,115 +38,79 @@ pip install playwright
 playwright install chromium
 ```
 
-## How to Use
-
-### Run the scraper
+### 3. Run
 
 ```bash
-python substack_scraper.py
+./start.sh
 ```
 
-The browser will open automatically, scrape profiles, and save results to `substack_profiles.csv`.
+Or run components separately:
+
+```bash
+# Terminal 1: Start dashboard
+python3 live_server.py
+
+# Terminal 2: Run scraper
+source venv/bin/activate && python substack_scraper.py
+```
 
 ## Configuration
 
-Edit `scraper_config.ini` to customize the scraper:
-
-### Scraper Settings
+Edit `scraper_config.ini`:
 
 ```ini
 [scraper]
-max_profiles = 200          # How many profiles to collect
-scroll_times = 5            # How many times to scroll (more = more profiles)
-max_subscribers = 30000     # Skip profiles with more subscribers than this
-min_subscribers = 0         # Skip profiles with fewer subscribers than this
-```
+max_profiles = 200          # Total profiles to collect
+concurrent_profiles = 100   # Profiles to scrape in parallel (speed)
+max_subscribers = 0         # 0 = unlimited
+min_subscribers = 1000      # Skip small accounts
 
-### Browser Settings
-
-```ini
 [browser]
-headless = false            # true = no browser window (faster)
-timeout_ms = 60000          # Page load timeout
-page_wait_ms = 3000         # Wait after page loads
-request_delay_ms = 3000     # Delay between requests (prevents rate limiting)
-error_delay_ms = 10000      # Wait after errors
+headless = true             # true = faster (no browser window)
+request_delay_ms = 1500     # Delay between batches
 ```
 
-### Output Settings
+## Leaderboard URLs
 
-```ini
-[output]
-format = csv                # csv or json
-filename = substack_profiles
-output_dir = /Users/aadi/Documents/automated_testing
+Edit `leaderboard_urls.txt` to add/remove categories:
+
 ```
-
-### Filter Settings
-
-```ini
-[filters]
-platforms =                 # Leave empty for all, or: twitter,instagram,tiktok
-require_social_links = false  # true = only collect profiles with social links
+https://substack.com/leaderboard/technology/rising
+https://substack.com/leaderboard/culture/rising
+https://substack.com/leaderboard/business/rising
+# Add more URLs here...
 ```
 
 ## Output
 
-The scraper creates `substack_profiles.csv` with these columns:
+`substack_profiles.csv` contains:
 
 | Column | Description |
 |--------|-------------|
 | Username | Substack username |
-| Profile URL | Link to their profile |
-| Subscribers | Number of subscribers |
-| Twitter | Twitter/X profile URL |
-| Instagram | Instagram profile URL |
-| TikTok | TikTok profile URL |
-| LinkedIn | LinkedIn profile URL |
-| Facebook | Facebook profile URL |
-| YouTube | YouTube channel URL |
-| Linktree | Linktree URL |
-| Threads | Threads profile URL |
-| Bluesky | Bluesky profile URL |
-| GitHub | GitHub profile URL |
-| Medium | Medium profile URL |
-| Other | Other links |
-| Scraped At | When the data was collected |
+| Profile URL | Link to profile |
+| Subscribers | Subscriber count |
+| Twitter, Instagram, etc. | Social media links |
+| Category | Leaderboard category |
 
-## Examples
+## Live Dashboard
 
-### Scrape only small creators (under 5K subscribers)
-
-```ini
-max_subscribers = 5000
-```
-
-### Only get Twitter and Instagram links
-
-```ini
-platforms = twitter,instagram
-```
-
-### Run faster without browser window
-
-```ini
-headless = true
-```
-
-### Only collect profiles that have social links
-
-```ini
-require_social_links = true
-```
+Open http://localhost:8080 to see:
+- Profile cards with category badges
+- Filter by status (Accepted/Rejected)
+- Filter by category dropdown
+- Search by username
+- Auto-refresh every 3 seconds
 
 ## Troubleshooting
 
+**Port 8080 in use?**
+```bash
+lsof -ti:8080 | xargs kill -9
+```
+
 **Browser doesn't open?**
-- Run `playwright install chromium` again
+```bash
+playwright install chromium
+```
 
-**Timeout errors?**
-- Increase `timeout_ms` in config
-- Check your internet connection
-
-**No profiles found?**
-- Increase `scroll_times` to load more content
