@@ -1,0 +1,36 @@
+# Substack Leaderboard URLs
+# Add one URL per line. Lines starting with # are comments.
+# The scraper will visit each URL and scrape all profiles (scrolls to load all ~100 profiles per page)
+
+# Bestsellers Rising
+https://substack.com/leaderboard/bestseller/rising
+
+# Culture
+https://substack.com/leaderboard/culture/rising
+
+# Technology
+https://substack.com/leaderboard/technology/rising
+
+# Business
+https://substack.com/leaderboard/business/rising
+
+# US Politics
+https://substack.com/leaderboard/us-politics/rising
+
+# Finance
+https://substack.com/leaderboard/finance/rising
+
+# Food & Drink
+https://substack.com/leaderboard/food/rising
+
+# Sports
+https://substack.com/leaderboard/sports/rising
+
+# Art & Illustration
+https://substack.com/leaderboard/art/rising
+
+# World Politics
+https://substack.com/leaderboard/world-politics/rising
+
+# Health & Politics
+https://substack.com/leaderboard/health-politics/rising
