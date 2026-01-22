@@ -29,17 +29,18 @@ def load_config(config_path: str = "scraper_config.ini") -> dict:
     
     return {
         # Scraper settings
-        "max_profiles": config.getint("scraper", "max_profiles", fallback=1000),
-        "max_subscribers": config.getint("scraper", "max_subscribers", fallback=50000),
+        "max_profiles": config.getint("scraper", "max_profiles", fallback=0),
+        "max_subscribers": config.getint("scraper", "max_subscribers", fallback=0),
         "min_subscribers": config.getint("scraper", "min_subscribers", fallback=0),
         
         # Browser settings
-        "headless": config.getboolean("browser", "headless", fallback=False),
-        "timeout_ms": config.getint("browser", "timeout_ms", fallback=60000),
-        "page_wait_ms": config.getint("browser", "page_wait_ms", fallback=3000),
+        "headless": config.getboolean("browser", "headless", fallback=True),
+        "timeout_ms": config.getint("browser", "timeout_ms", fallback=30000),
+        "page_wait_ms": config.getint("browser", "page_wait_ms", fallback=2000),
         "scroll_wait_ms": config.getint("browser", "scroll_wait_ms", fallback=2000),
-        "request_delay_ms": config.getint("browser", "request_delay_ms", fallback=3000),
-        "error_delay_ms": config.getint("browser", "error_delay_ms", fallback=10000),
+        "request_delay_ms": config.getint("browser", "request_delay_ms", fallback=1000),
+        "error_delay_ms": config.getint("browser", "error_delay_ms", fallback=5000),
+        "max_retries": config.getint("browser", "max_retries", fallback=3),
         
         # Output settings
         "format": config.get("output", "format", fallback="csv"),
@@ -51,7 +52,7 @@ def load_config(config_path: str = "scraper_config.ini") -> dict:
         "require_social_links": config.getboolean("filters", "require_social_links", fallback=False),
         
         # Concurrent scraping settings
-        "concurrent_profiles": config.getint("scraper", "concurrent_profiles", fallback=3),
+        "concurrent_profiles": config.getint("scraper", "concurrent_profiles", fallback=50),
     }
 
 
@@ -212,34 +213,68 @@ def append_to_csv(profile: dict, config: dict):
         writer.writerow(row)
 
 
+
+def save_skipped_profile(profile_data: dict, reason: str, config: dict):
+    """Save skipped profile to JSON file."""
+    output_path = Path(config["output_dir"]) / "skipped_profiles.json"
+    
+    skipped_entry = {
+        "username": profile_data.get("username", "unknown"),
+        "profile_url": profile_data.get("profile_url", ""),
+        "reason": reason,
+        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "category": profile_data.get("category", "")
+    }
+    
+    try:
+        data = []
+        if output_path.exists():
+            with open(output_path, "r", encoding="utf-8") as f:
+                try:
+                    data = json.load(f)
+                except json.JSONDecodeError:
+                    pass
+        
+        data.append(skipped_entry)
+        
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2)
+            
+    except Exception as e:
+        print(f"⚠️ Error saving skipped profile: {e}")
+
+
 def scroll_and_collect_profiles(page, config: dict, existing_usernames: set, source_url: str) -> list:
     """
-    Scroll the leaderboard page to load all profiles (usually ~100).
+    Scroll the leaderboard page to load all profiles.
     Returns list of all unique profile URLs not already scraped.
+    Optimized for speed with faster exit conditions.
     """
     all_profile_urls = set()
     no_new_count = 0
-    max_no_new = 5  # Stop after 5 scrolls with no new profiles
+    max_no_new = 8  # Reduced for faster completion when no more profiles
     scroll_count = 0
+    min_profiles = 80  # Target minimum profiles per page
     
-    print(f"   📜 Scrolling to load all profiles...")
+    print(f"   📜 Scrolling to load profiles (Target: {min_profiles}+)...")
     
-    while scroll_count < 50:  # Max 50 scrolls per page
-        # Get current profile URLs
+    # Quick initial wait
+    time.sleep(1)
+    
+    while True: 
+        # Get current profile URLs with optimized JS
         profile_links = page.evaluate("""
             () => {
                 const links = document.querySelectorAll('a[href*="/@"]');
                 const uniqueUrls = new Set();
-                links.forEach(link => {
+                for (const link of links) {
                     const href = link.href;
                     if (href.includes('/@')) {
                         const match = href.match(/(https:\\/\\/substack\\.com\\/@[^/?]+)/);
-                        if (match) {
-                            uniqueUrls.add(match[1]);
-                        }
+                        if (match) uniqueUrls.add(match[1]);
                     }
-                });
-                return Array.from(uniqueUrls);
+                }
+                return [...uniqueUrls];
             }
         """)
         
@@ -248,29 +283,38 @@ def scroll_and_collect_profiles(page, config: dict, existing_usernames: set, sou
         if new_urls:
             all_profile_urls.update(new_urls)
             no_new_count = 0
-            print(f"      Scroll {scroll_count + 1}: +{len(new_urls)} profiles (total: {len(all_profile_urls)})")
+            print(f"      Scroll {scroll_count+1}: +{len(new_urls)} profiles (total: {len(all_profile_urls)})")
         else:
             no_new_count += 1
-            if no_new_count >= max_no_new:
-                print(f"      ✅ Finished scrolling - found {len(all_profile_urls)} profiles")
-                break
+            if no_new_count <= 3:  # Only log first few
+                print(f"      Scroll {scroll_count+1}: No new profiles ({no_new_count}/{max_no_new})")
         
-        # Scroll down
-        page.evaluate("window.scrollBy(0, 800)")
+        # Fast exit conditions
+        if len(all_profile_urls) >= min_profiles and no_new_count >= 2:
+            print(f"      ✅ Reached target {min_profiles}+ profiles ({len(all_profile_urls)} found)")
+            break
+            
+        if no_new_count >= max_no_new:
+            print(f"      ✅ Page fully loaded ({len(all_profile_urls)} profiles)")
+            break
+            
+        if scroll_count >= 50:  # Reduced hard limit
+            print(f"      ⚠️ Reached scroll limit ({len(all_profile_urls)} profiles)")
+            break
+            
+        # Fast scroll
+        page.keyboard.press("End")
         time.sleep(config["scroll_wait_ms"] / 1000)
         scroll_count += 1
-    
+        
     # Filter out already scraped profiles
-    new_profile_urls = []
-    for url in all_profile_urls:
-        username = url.split("/@")[-1].lower()
-        if username not in existing_usernames:
-            new_profile_urls.append(url)
+    new_profile_urls = [url for url in all_profile_urls 
+                        if url.split("/@")[-1].lower() not in existing_usernames]
     
     skipped = len(all_profile_urls) - len(new_profile_urls)
     if skipped > 0:
-        print(f"      ⏭️  Skipping {skipped} already scraped profiles")
-    
+        print(f"   ⏭️  Skipped {skipped} already scraped profiles")
+        
     return new_profile_urls
 
 
@@ -444,11 +488,21 @@ def scrape_profile_batch(browser, profile_urls: list, config: dict, category: st
                 if config["max_subscribers"] > 0 and subscriber_count > config["max_subscribers"]:
                     print(f"      ⏭️ @{username}: {subscriber_count:,} > max")
                     skipped_count += 1
+                    save_skipped_profile({
+                        "username": username,
+                        "profile_url": profile_url,
+                        "category": category
+                    }, f"Too many subscribers ({subscriber_count:,} > {config['max_subscribers']:,})", config)
                     continue
                 
                 if config["min_subscribers"] > 0 and subscriber_count < config["min_subscribers"]:
                     print(f"      ⏭️ @{username}: {subscriber_count:,} < min")
                     skipped_count += 1
+                    save_skipped_profile({
+                        "username": username,
+                        "profile_url": profile_url,
+                        "category": category
+                    }, f"Too few subscribers ({subscriber_count:,} < {config['min_subscribers']:,})", config)
                     continue
                 
                 # Extract social links
@@ -487,6 +541,11 @@ def scrape_profile_batch(browser, profile_urls: list, config: dict, category: st
                 # Check if we require social links
                 if config["require_social_links"] and not social_links:
                     skipped_count += 1
+                    save_skipped_profile({
+                        "username": username,
+                        "profile_url": profile_url,
+                        "category": category
+                    }, "No social links found", config)
                     continue
                 
                 profile_data = {
@@ -543,7 +602,7 @@ def scrape_leaderboards(config: dict, urls: list):
         
         # Process each leaderboard URL
         for url_idx, leaderboard_url in enumerate(urls, 1):
-            if total_processed >= config["max_profiles"]:
+            if config["max_profiles"] > 0 and total_processed >= config["max_profiles"]:
                 print(f"\n✅ Reached max profiles limit ({config['max_profiles']})")
                 break
             
@@ -570,7 +629,7 @@ def scrape_leaderboards(config: dict, urls: list):
                 
                 # Process profiles in batches
                 for batch_start in range(0, len(profile_urls), batch_size):
-                    if total_processed >= config["max_profiles"]:
+                    if config["max_profiles"] > 0 and total_processed >= config["max_profiles"]:
                         break
                     
                     batch_end = min(batch_start + batch_size, len(profile_urls))
@@ -593,16 +652,13 @@ def scrape_leaderboards(config: dict, urls: list):
                     skipped_count += batch_skipped
                     error_count += batch_errors
                     
-                    # Small delay between batches to avoid rate limiting
+                    # Minimal delay between batches (only if more to process)
                     if batch_end < len(profile_urls):
-                        delay = config["request_delay_ms"] / 1000
-                        print(f"   ⏱️ Waiting {delay:.1f}s before next batch...")
-                        time.sleep(delay)
+                        time.sleep(config["request_delay_ms"] / 1000)
                 
-                # Delay between leaderboards
+                # Quick delay between leaderboards
                 if url_idx < len(urls):
-                    print(f"\n   ⏱️ Waiting 3s before next category...")
-                    time.sleep(3)
+                    time.sleep(1.5)
                     
             except Exception as e:
                 print(f"   ❌ Error loading leaderboard: {e}")
@@ -633,7 +689,7 @@ def main():
     
     # Print configuration
     print("\n⚙️  Configuration:")
-    print(f"   Max profiles: {config['max_profiles']}")
+    print(f"   Max profiles: {'Unlimited' if config['max_profiles'] == 0 else config['max_profiles']}")
     print(f"   Max subscribers: {config['max_subscribers']:,}")
     print(f"   Min subscribers: {config['min_subscribers']:,}")
     print(f"   Request delay: {config['request_delay_ms']}ms")

@@ -7,11 +7,12 @@ cd "$(dirname "$0")"
 # Activate virtual environment
 source venv/bin/activate
 
-# Kill any existing processes on port 8080
-echo "🔄 Checking port 8080..."
-lsof -ti:8080 | xargs kill -9 2>/dev/null
-pkill -f "python.*live_server" 2>/dev/null
-sleep 2
+# Aggressively kill any existing processes on port 8080
+echo "🔄 Killing any existing processes on port 8080..."
+kill -9 $(lsof -ti:8080) 2>/dev/null || true
+pkill -9 -f "python.*live_server" 2>/dev/null || true
+pkill -9 -f "python.*substack_scraper" 2>/dev/null || true
+sleep 3
 
 echo "=============================================="
 echo "🚀 SUBSTACK SCRAPER - STARTING"
@@ -22,7 +23,7 @@ echo ""
 echo "🌐 Starting live server on http://localhost:8080..."
 python live_server.py &
 SERVER_PID=$!
-sleep 2
+sleep 3
 
 # Open browser (macOS)
 open http://localhost:8080 2>/dev/null || echo "   Open http://localhost:8080 in your browser"
