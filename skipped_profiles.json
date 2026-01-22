@@ -9609,5 +9609,796 @@
     "reason": "Too few subscribers (300 < 1,000)",
     "timestamp": "2026-01-22 05:44:15",
     "category": "Education"
+  },
+  {
+    "username": "shaeomonijo",
+    "profile_url": "https://substack.com/@shaeomonijo",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:18:23",
+    "category": "Bestseller"
+  },
+  {
+    "username": "stephenmcalpine",
+    "profile_url": "https://substack.com/@stephenmcalpine",
+    "reason": "Too few subscribers (904 < 1,000)",
+    "timestamp": "2026-01-22 21:18:23",
+    "category": "Bestseller"
+  },
+  {
+    "username": "rubiagarcia",
+    "profile_url": "https://substack.com/@rubiagarcia",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:18:23",
+    "category": "Bestseller"
+  },
+  {
+    "username": "devonpass",
+    "profile_url": "https://substack.com/@devonpass",
+    "reason": "Too few subscribers (339 < 1,000)",
+    "timestamp": "2026-01-22 21:18:23",
+    "category": "Bestseller"
+  },
+  {
+    "username": "ariadiana",
+    "profile_url": "https://substack.com/@ariadiana",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:19:41",
+    "category": "Culture"
+  },
+  {
+    "username": "bobhomans",
+    "profile_url": "https://substack.com/@bobhomans",
+    "reason": "Too few subscribers (384 < 1,000)",
+    "timestamp": "2026-01-22 21:19:41",
+    "category": "Culture"
+  },
+  {
+    "username": "deuxmoi",
+    "profile_url": "https://substack.com/@deuxmoi",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:19:42",
+    "category": "Culture"
+  },
+  {
+    "username": "maddycourt",
+    "profile_url": "https://substack.com/@maddycourt",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:19:42",
+    "category": "Culture"
+  },
+  {
+    "username": "legsmcneil",
+    "profile_url": "https://substack.com/@legsmcneil",
+    "reason": "Too few subscribers (184 < 1,000)",
+    "timestamp": "2026-01-22 21:19:42",
+    "category": "Culture"
+  },
+  {
+    "username": "hcperelman",
+    "profile_url": "https://substack.com/@hcperelman",
+    "reason": "Too few subscribers (20 < 1,000)",
+    "timestamp": "2026-01-22 21:19:42",
+    "category": "Culture"
+  },
+  {
+    "username": "ileniazodiaco",
+    "profile_url": "https://substack.com/@ileniazodiaco",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:19:42",
+    "category": "Culture"
+  },
+  {
+    "username": "rondac",
+    "profile_url": "https://substack.com/@rondac",
+    "reason": "Too few subscribers (160 < 1,000)",
+    "timestamp": "2026-01-22 21:19:42",
+    "category": "Culture"
+  },
+  {
+    "username": "elevin11",
+    "profile_url": "https://substack.com/@elevin11",
+    "reason": "Too few subscribers (113 < 1,000)",
+    "timestamp": "2026-01-22 21:19:42",
+    "category": "Culture"
+  },
+  {
+    "username": "alyesalem",
+    "profile_url": "https://substack.com/@alyesalem",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:19:42",
+    "category": "Culture"
+  },
+  {
+    "username": "stonedsapiens",
+    "profile_url": "https://substack.com/@stonedsapiens",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:19:42",
+    "category": "Culture"
+  },
+  {
+    "username": "gabrielgomeznyc",
+    "profile_url": "https://substack.com/@gabrielgomeznyc",
+    "reason": "Too few subscribers (434 < 1,000)",
+    "timestamp": "2026-01-22 21:19:42",
+    "category": "Culture"
+  },
+  {
+    "username": "shaeomonijo",
+    "profile_url": "https://substack.com/@shaeomonijo",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:21:21",
+    "category": "Business"
+  },
+  {
+    "username": "arielkaye",
+    "profile_url": "https://substack.com/@arielkaye",
+    "reason": "Too few subscribers (753 < 1,000)",
+    "timestamp": "2026-01-22 21:21:21",
+    "category": "Business"
+  },
+  {
+    "username": "gregswan",
+    "profile_url": "https://substack.com/@gregswan",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:21:21",
+    "category": "Business"
+  },
+  {
+    "username": "freelancewritingopps",
+    "profile_url": "https://substack.com/@freelancewritingopps",
+    "reason": "Too few subscribers (804 < 1,000)",
+    "timestamp": "2026-01-22 21:21:21",
+    "category": "Business"
+  },
+  {
+    "username": "sophieaxelson",
+    "profile_url": "https://substack.com/@sophieaxelson",
+    "reason": "Too few subscribers (906 < 1,000)",
+    "timestamp": "2026-01-22 21:21:21",
+    "category": "Business"
+  },
+  {
+    "username": "amberlilyestrom",
+    "profile_url": "https://substack.com/@amberlilyestrom",
+    "reason": "Too few subscribers (82 < 1,000)",
+    "timestamp": "2026-01-22 21:21:21",
+    "category": "Business"
+  },
+  {
+    "username": "jobsthatworknewsletter",
+    "profile_url": "https://substack.com/@jobsthatworknewsletter",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:21:21",
+    "category": "Business"
+  },
+  {
+    "username": "meghantalksmarketing",
+    "profile_url": "https://substack.com/@meghantalksmarketing",
+    "reason": "Too few subscribers (749 < 1,000)",
+    "timestamp": "2026-01-22 21:21:21",
+    "category": "Business"
+  },
+  {
+    "username": "collyer",
+    "profile_url": "https://substack.com/@collyer",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:21:21",
+    "category": "Business"
+  },
+  {
+    "username": "tightspreads",
+    "profile_url": "https://substack.com/@tightspreads",
+    "reason": "Too few subscribers (197 < 1,000)",
+    "timestamp": "2026-01-22 21:21:21",
+    "category": "Business"
+  },
+  {
+    "username": "patsyday",
+    "profile_url": "https://substack.com/@patsyday",
+    "reason": "Too few subscribers (367 < 1,000)",
+    "timestamp": "2026-01-22 21:21:21",
+    "category": "Business"
+  },
+  {
+    "username": "chiefofstaffschool",
+    "profile_url": "https://substack.com/@chiefofstaffschool",
+    "reason": "Too few subscribers (272 < 1,000)",
+    "timestamp": "2026-01-22 21:21:21",
+    "category": "Business"
+  },
+  {
+    "username": "calcorporatelaw",
+    "profile_url": "https://substack.com/@calcorporatelaw",
+    "reason": "Too few subscribers (45 < 1,000)",
+    "timestamp": "2026-01-22 21:21:21",
+    "category": "Business"
+  },
+  {
+    "username": "swisstransparentportfolio",
+    "profile_url": "https://substack.com/@swisstransparentportfolio",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:21:21",
+    "category": "Business"
+  },
+  {
+    "username": "thestanza",
+    "profile_url": "https://substack.com/@thestanza",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:21:21",
+    "category": "Business"
+  },
+  {
+    "username": "globalportalen",
+    "profile_url": "https://substack.com/@globalportalen",
+    "reason": "Too few subscribers (511 < 1,000)",
+    "timestamp": "2026-01-22 21:21:22",
+    "category": "Business"
+  },
+  {
+    "username": "lilyraynyc",
+    "profile_url": "https://substack.com/@lilyraynyc",
+    "reason": "Too few subscribers (835 < 1,000)",
+    "timestamp": "2026-01-22 21:21:22",
+    "category": "Business"
+  },
+  {
+    "username": "digischool",
+    "profile_url": "https://substack.com/@digischool",
+    "reason": "Too few subscribers (778 < 1,000)",
+    "timestamp": "2026-01-22 21:21:22",
+    "category": "Business"
+  },
+  {
+    "username": "lindsaypinchuk",
+    "profile_url": "https://substack.com/@lindsaypinchuk",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:21:22",
+    "category": "Business"
+  },
+  {
+    "username": "brevarthanresearch",
+    "profile_url": "https://substack.com/@brevarthanresearch",
+    "reason": "Too few subscribers (598 < 1,000)",
+    "timestamp": "2026-01-22 21:22:54",
+    "category": "Finance"
+  },
+  {
+    "username": "alfiemeek",
+    "profile_url": "https://substack.com/@alfiemeek",
+    "reason": "Too few subscribers (923 < 1,000)",
+    "timestamp": "2026-01-22 21:22:54",
+    "category": "Finance"
+  },
+  {
+    "username": "mostovic",
+    "profile_url": "https://substack.com/@mostovic",
+    "reason": "Too few subscribers (453 < 1,000)",
+    "timestamp": "2026-01-22 21:22:54",
+    "category": "Finance"
+  },
+  {
+    "username": "mciuzelis",
+    "profile_url": "https://substack.com/@mciuzelis",
+    "reason": "Too few subscribers (398 < 1,000)",
+    "timestamp": "2026-01-22 21:22:54",
+    "category": "Finance"
+  },
+  {
+    "username": "ethanontheeconomy",
+    "profile_url": "https://substack.com/@ethanontheeconomy",
+    "reason": "Too few subscribers (49 < 1,000)",
+    "timestamp": "2026-01-22 21:22:54",
+    "category": "Finance"
+  },
+  {
+    "username": "adavizq",
+    "profile_url": "https://substack.com/@adavizq",
+    "reason": "Too few subscribers (233 < 1,000)",
+    "timestamp": "2026-01-22 21:22:54",
+    "category": "Finance"
+  },
+  {
+    "username": "thelastbearstanding",
+    "profile_url": "https://substack.com/@thelastbearstanding",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:22:54",
+    "category": "Finance"
+  },
+  {
+    "username": "stfbutnou",
+    "profile_url": "https://substack.com/@stfbutnou",
+    "reason": "Too few subscribers (730 < 1,000)",
+    "timestamp": "2026-01-22 21:22:54",
+    "category": "Finance"
+  },
+  {
+    "username": "400kproject",
+    "profile_url": "https://substack.com/@400kproject",
+    "reason": "Too few subscribers (65 < 1,000)",
+    "timestamp": "2026-01-22 21:22:54",
+    "category": "Finance"
+  },
+  {
+    "username": "thedecisionnote",
+    "profile_url": "https://substack.com/@thedecisionnote",
+    "reason": "Too few subscribers (10 < 1,000)",
+    "timestamp": "2026-01-22 21:22:54",
+    "category": "Finance"
+  },
+  {
+    "username": "tictoctrading",
+    "profile_url": "https://substack.com/@tictoctrading",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:22:55",
+    "category": "Finance"
+  },
+  {
+    "username": "benlewismpc",
+    "profile_url": "https://substack.com/@benlewismpc",
+    "reason": "Too few subscribers (412 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "jpgambatese",
+    "profile_url": "https://substack.com/@jpgambatese",
+    "reason": "Too few subscribers (897 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "joefriel",
+    "profile_url": "https://substack.com/@joefriel",
+    "reason": "Too few subscribers (611 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "surefirebetsuk",
+    "profile_url": "https://substack.com/@surefirebetsuk",
+    "reason": "Too few subscribers (178 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "benrosener",
+    "profile_url": "https://substack.com/@benrosener",
+    "reason": "Too few subscribers (522 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "eddiefyvie",
+    "profile_url": "https://substack.com/@eddiefyvie",
+    "reason": "Too few subscribers (83 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "soccerwriter",
+    "profile_url": "https://substack.com/@soccerwriter",
+    "reason": "Too few subscribers (449 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "oriolesontheverge",
+    "profile_url": "https://substack.com/@oriolesontheverge",
+    "reason": "Too few subscribers (913 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "theelmonters",
+    "profile_url": "https://substack.com/@theelmonters",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "davepowelltheseal",
+    "profile_url": "https://substack.com/@davepowelltheseal",
+    "reason": "Too few subscribers (719 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "siclancy",
+    "profile_url": "https://substack.com/@siclancy",
+    "reason": "Too few subscribers (175 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "billreiter",
+    "profile_url": "https://substack.com/@billreiter",
+    "reason": "Too few subscribers (551 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "thegrimyhandshake",
+    "profile_url": "https://substack.com/@thegrimyhandshake",
+    "reason": "Too few subscribers (612 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "americanwave2028",
+    "profile_url": "https://substack.com/@americanwave2028",
+    "reason": "Too few subscribers (11 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "hughespa",
+    "profile_url": "https://substack.com/@hughespa",
+    "reason": "Too few subscribers (998 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "stuonslu",
+    "profile_url": "https://substack.com/@stuonslu",
+    "reason": "Too few subscribers (884 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "championshipnorge",
+    "profile_url": "https://substack.com/@championshipnorge",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "pitchmarks",
+    "profile_url": "https://substack.com/@pitchmarks",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "thetipsjar",
+    "profile_url": "https://substack.com/@thetipsjar",
+    "reason": "Too few subscribers (112 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "childersradio",
+    "profile_url": "https://substack.com/@childersradio",
+    "reason": "Too few subscribers (111 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "gregmays",
+    "profile_url": "https://substack.com/@gregmays",
+    "reason": "Too few subscribers (111 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "viewsfromtheschottpodcast",
+    "profile_url": "https://substack.com/@viewsfromtheschottpodcast",
+    "reason": "Too few subscribers (127 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "impersonalfoul",
+    "profile_url": "https://substack.com/@impersonalfoul",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "itsalangood",
+    "profile_url": "https://substack.com/@itsalangood",
+    "reason": "Too few subscribers (970 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "mauricetierney",
+    "profile_url": "https://substack.com/@mauricetierney",
+    "reason": "Too few subscribers (234 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "tonycoccagna",
+    "profile_url": "https://substack.com/@tonycoccagna",
+    "reason": "Too few subscribers (462 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "jonledyard",
+    "profile_url": "https://substack.com/@jonledyard",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:24:45",
+    "category": "Sports"
+  },
+  {
+    "username": "huskermat",
+    "profile_url": "https://substack.com/@huskermat",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:24:46",
+    "category": "Sports"
+  },
+  {
+    "username": "eddiefitzgibbon",
+    "profile_url": "https://substack.com/@eddiefitzgibbon",
+    "reason": "Too few subscribers (160 < 1,000)",
+    "timestamp": "2026-01-22 21:24:46",
+    "category": "Sports"
+  },
+  {
+    "username": "insideiupfootball",
+    "profile_url": "https://substack.com/@insideiupfootball",
+    "reason": "Too few subscribers (368 < 1,000)",
+    "timestamp": "2026-01-22 21:24:46",
+    "category": "Sports"
+  },
+  {
+    "username": "gideonlichfield",
+    "profile_url": "https://substack.com/@gideonlichfield",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:26:56",
+    "category": "World Politics"
+  },
+  {
+    "username": "candicemalcolm",
+    "profile_url": "https://substack.com/@candicemalcolm",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:26:56",
+    "category": "World Politics"
+  },
+  {
+    "username": "thegrayzone",
+    "profile_url": "https://substack.com/@thegrayzone",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:26:56",
+    "category": "World Politics"
+  },
+  {
+    "username": "tammyrobert",
+    "profile_url": "https://substack.com/@tammyrobert",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:26:56",
+    "category": "World Politics"
+  },
+  {
+    "username": "padre76",
+    "profile_url": "https://substack.com/@padre76",
+    "reason": "Too few subscribers (153 < 1,000)",
+    "timestamp": "2026-01-22 21:26:57",
+    "category": "World Politics"
+  },
+  {
+    "username": "strictsecret",
+    "profile_url": "https://substack.com/@strictsecret",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:26:57",
+    "category": "World Politics"
+  },
+  {
+    "username": "nickrockel",
+    "profile_url": "https://substack.com/@nickrockel",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:26:57",
+    "category": "World Politics"
+  },
+  {
+    "username": "melindalaituri187140",
+    "profile_url": "https://substack.com/@melindalaituri187140",
+    "reason": "Too few subscribers (55 < 1,000)",
+    "timestamp": "2026-01-22 21:26:57",
+    "category": "World Politics"
+  },
+  {
+    "username": "guyrundle",
+    "profile_url": "https://substack.com/@guyrundle",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:26:57",
+    "category": "World Politics"
+  },
+  {
+    "username": "themaorigreenlantern",
+    "profile_url": "https://substack.com/@themaorigreenlantern",
+    "reason": "Too few subscribers (288 < 1,000)",
+    "timestamp": "2026-01-22 21:26:57",
+    "category": "World Politics"
+  },
+  {
+    "username": "rhyd",
+    "profile_url": "https://substack.com/@rhyd",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:26:57",
+    "category": "World Politics"
+  },
+  {
+    "username": "moralclarity",
+    "profile_url": "https://substack.com/@moralclarity",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:26:57",
+    "category": "World Politics"
+  },
+  {
+    "username": "theartofspycraft",
+    "profile_url": "https://substack.com/@theartofspycraft",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:26:57",
+    "category": "World Politics"
+  },
+  {
+    "username": "olympicherald",
+    "profile_url": "https://substack.com/@olympicherald",
+    "reason": "Too few subscribers (261 < 1,000)",
+    "timestamp": "2026-01-22 21:28:46",
+    "category": "News"
+  },
+  {
+    "username": "9irlnews",
+    "profile_url": "https://substack.com/@9irlnews",
+    "reason": "Too few subscribers (97 < 1,000)",
+    "timestamp": "2026-01-22 21:28:46",
+    "category": "News"
+  },
+  {
+    "username": "eotb",
+    "profile_url": "https://substack.com/@eotb",
+    "reason": "Too few subscribers (483 < 1,000)",
+    "timestamp": "2026-01-22 21:28:46",
+    "category": "News"
+  },
+  {
+    "username": "fingeronpulse",
+    "profile_url": "https://substack.com/@fingeronpulse",
+    "reason": "Too few subscribers (552 < 1,000)",
+    "timestamp": "2026-01-22 21:28:46",
+    "category": "News"
+  },
+  {
+    "username": "kevinwinge",
+    "profile_url": "https://substack.com/@kevinwinge",
+    "reason": "Too few subscribers (244 < 1,000)",
+    "timestamp": "2026-01-22 21:28:46",
+    "category": "News"
+  },
+  {
+    "username": "gossipbcs",
+    "profile_url": "https://substack.com/@gossipbcs",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:28:46",
+    "category": "News"
+  },
+  {
+    "username": "deepcutnews",
+    "profile_url": "https://substack.com/@deepcutnews",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:28:46",
+    "category": "News"
+  },
+  {
+    "username": "clemgarin",
+    "profile_url": "https://substack.com/@clemgarin",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:28:46",
+    "category": "News"
+  },
+  {
+    "username": "freelancingwithtim",
+    "profile_url": "https://substack.com/@freelancingwithtim",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:28:47",
+    "category": "News"
+  },
+  {
+    "username": "tedlund1",
+    "profile_url": "https://substack.com/@tedlund1",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:28:47",
+    "category": "News"
+  },
+  {
+    "username": "cobblehillcollective",
+    "profile_url": "https://substack.com/@cobblehillcollective",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:28:47",
+    "category": "News"
+  },
+  {
+    "username": "neweatherguy",
+    "profile_url": "https://substack.com/@neweatherguy",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:28:47",
+    "category": "News"
+  },
+  {
+    "username": "thebwstimes",
+    "profile_url": "https://substack.com/@thebwstimes",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:28:47",
+    "category": "News"
+  },
+  {
+    "username": "rtmp",
+    "profile_url": "https://substack.com/@rtmp",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:28:47",
+    "category": "News"
+  },
+  {
+    "username": "tokiohotelaliensunite",
+    "profile_url": "https://substack.com/@tokiohotelaliensunite",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:28:47",
+    "category": "News"
+  },
+  {
+    "username": "claytoonz",
+    "profile_url": "https://substack.com/@claytoonz",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:28:47",
+    "category": "News"
+  },
+  {
+    "username": "philippecorbe",
+    "profile_url": "https://substack.com/@philippecorbe",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:28:47",
+    "category": "News"
+  },
+  {
+    "username": "weissmann",
+    "profile_url": "https://substack.com/@weissmann",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:28:47",
+    "category": "News"
+  },
+  {
+    "username": "crustnews",
+    "profile_url": "https://substack.com/@crustnews",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:28:47",
+    "category": "News"
+  },
+  {
+    "username": "lareported",
+    "profile_url": "https://substack.com/@lareported",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:28:47",
+    "category": "News"
+  },
+  {
+    "username": "alexphillips",
+    "profile_url": "https://substack.com/@alexphillips",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:28:47",
+    "category": "News"
+  },
+  {
+    "username": "palestinechronicle",
+    "profile_url": "https://substack.com/@palestinechronicle",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:28:47",
+    "category": "News"
+  },
+  {
+    "username": "ioangrillo",
+    "profile_url": "https://substack.com/@ioangrillo",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:28:47",
+    "category": "News"
+  },
+  {
+    "username": "theglobalchief",
+    "profile_url": "https://substack.com/@theglobalchief",
+    "reason": "Too few subscribers (0 < 1,000)",
+    "timestamp": "2026-01-22 21:28:47",
+    "category": "News"
   }
 ]
