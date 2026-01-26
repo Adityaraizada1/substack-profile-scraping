@@ -81,8 +81,17 @@
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.4; transform: scale(1.3); }
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.4;
+                transform: scale(1.3);
+            }
         }
 
         .stats-bar {
@@ -99,7 +108,7 @@
             text-align: center;
             min-width: 80px;
             padding: 0.5rem 1rem;
-            background: rgba(255,255,255,0.02);
+            background: rgba(255, 255, 255, 0.02);
             border-radius: 10px;
         }
 
@@ -109,16 +118,28 @@
             display: block;
         }
 
-        .stat-value.accepted { color: var(--accent-success); }
-        .stat-value.rejected { color: var(--accent-error); }
-        .stat-value.skipped { color: var(--accent-warning); }
+        .stat-value.accepted {
+            color: var(--accent-success);
+        }
+
+        .stat-value.rejected {
+            color: var(--accent-error);
+        }
+
+        .stat-value.skipped {
+            color: var(--accent-warning);
+        }
+
         .stat-value.total {
             background: var(--gradient-primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .stat-value.links { color: #60a5fa; }
+
+        .stat-value.links {
+            color: #60a5fa;
+        }
 
         .stat-label {
             font-size: 0.65rem;
@@ -144,7 +165,8 @@
             gap: 0.4rem;
         }
 
-        .filter-btn, .sort-btn {
+        .filter-btn,
+        .sort-btn {
             padding: 0.45rem 0.9rem;
             border-radius: 8px;
             border: 1px solid var(--border-color);
@@ -156,7 +178,8 @@
             font-family: inherit;
         }
 
-        .filter-btn:hover, .sort-btn:hover {
+        .filter-btn:hover,
+        .sort-btn:hover {
             border-color: var(--accent-primary);
             color: var(--text-primary);
         }
@@ -167,9 +190,23 @@
             color: white;
         }
 
-        .filter-btn.active-success { background: var(--accent-success); border-color: var(--accent-success); color: white; }
-        .filter-btn.active-error { background: var(--accent-error); border-color: var(--accent-error); color: white; }
-        .filter-btn.active-warning { background: var(--accent-warning); border-color: var(--accent-warning); color: white; }
+        .filter-btn.active-success {
+            background: var(--accent-success);
+            border-color: var(--accent-success);
+            color: white;
+        }
+
+        .filter-btn.active-error {
+            background: var(--accent-error);
+            border-color: var(--accent-error);
+            color: white;
+        }
+
+        .filter-btn.active-warning {
+            background: var(--accent-warning);
+            border-color: var(--accent-warning);
+            color: white;
+        }
 
         .search-box {
             flex: 1;
@@ -215,7 +252,21 @@
             min-width: 120px;
         }
 
-        .select-styled:focus { outline: none; border-color: var(--accent-primary); }
+        .select-styled:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+        }
+
+        .results-count {
+            padding: 0.45rem 0.9rem;
+            background: rgba(255, 107, 53, 0.12);
+            border: 1px solid rgba(255, 107, 53, 0.25);
+            border-radius: 8px;
+            font-size: 0.75rem;
+            color: var(--accent-primary);
+            font-weight: 600;
+            white-space: nowrap;
+        }
 
         .container {
             max-width: 1500px;
@@ -229,8 +280,17 @@
             color: var(--text-secondary);
         }
 
-        .empty-state .icon { font-size: 3rem; margin-bottom: 1rem; opacity: 0.5; }
-        .empty-state h3 { font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-primary); }
+        .empty-state .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        .empty-state h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
 
         .profiles-grid {
             display: grid;
@@ -253,9 +313,18 @@
             border-color: rgba(255, 107, 53, 0.25);
         }
 
-        .profile-card.accepted { border-left: 3px solid var(--accent-success); }
-        .profile-card.rejected { border-left: 3px solid var(--accent-error); opacity: 0.75; }
-        .profile-card.rejected:hover { opacity: 1; }
+        .profile-card.accepted {
+            border-left: 3px solid var(--accent-success);
+        }
+
+        .profile-card.rejected {
+            border-left: 3px solid var(--accent-error);
+            opacity: 0.75;
+        }
+
+        .profile-card.rejected:hover {
+            opacity: 1;
+        }
 
         .card-header {
             padding: 0.9rem 1rem;
@@ -266,11 +335,25 @@
             gap: 0.5rem;
         }
 
-        .profile-info { flex: 1; min-width: 0; }
+        .profile-info {
+            flex: 1;
+            min-width: 0;
+        }
 
-        .username { font-size: 0.95rem; font-weight: 600; }
-        .username a { color: inherit; text-decoration: none; transition: color 0.15s; }
-        .username a:hover { color: var(--accent-primary); }
+        .username {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .username a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+
+        .username a:hover {
+            color: var(--accent-primary);
+        }
 
         .subscriber-count {
             font-size: 0.75rem;
@@ -281,7 +364,10 @@
             gap: 0.75rem;
         }
 
-        .links-count { color: #60a5fa; font-weight: 500; }
+        .links-count {
+            color: #60a5fa;
+            font-weight: 500;
+        }
 
         .status-badge {
             padding: 0.25rem 0.55rem;
@@ -292,10 +378,19 @@
             letter-spacing: 0.3px;
         }
 
-        .status-badge.accepted { background: rgba(16, 185, 129, 0.15); color: var(--accent-success); }
-        .status-badge.rejected { background: rgba(239, 68, 68, 0.15); color: var(--accent-error); }
+        .status-badge.accepted {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent-success);
+        }
 
-        .card-body { padding: 0.85rem 1rem; }
+        .status-badge.rejected {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--accent-error);
+        }
+
+        .card-body {
+            padding: 0.85rem 1rem;
+        }
 
         .social-links {
             display: flex;
@@ -323,8 +418,15 @@
             color: var(--accent-primary);
         }
 
-        .social-link .icon { font-size: 0.85rem; }
-        .no-socials { color: var(--text-muted); font-size: 0.75rem; font-style: italic; }
+        .social-link .icon {
+            font-size: 0.85rem;
+        }
+
+        .no-socials {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-style: italic;
+        }
 
         .rejection-reason {
             margin-top: 0.6rem;
@@ -345,7 +447,11 @@
             align-items: center;
         }
 
-        .card-footer a { color: var(--accent-primary); text-decoration: none; font-weight: 500; }
+        .card-footer a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
 
         .category-badge {
             padding: 0.2rem 0.5rem;
@@ -357,24 +463,86 @@
             white-space: nowrap;
         }
 
-        .category-badge.technology { background: rgba(59, 130, 246, 0.18); color: #60a5fa; }
-        .category-badge.culture { background: rgba(168, 85, 247, 0.18); color: #c084fc; }
-        .category-badge.business { background: rgba(34, 197, 94, 0.18); color: #4ade80; }
-        .category-badge.finance { background: rgba(234, 179, 8, 0.18); color: #facc15; }
-        .category-badge.us-politics { background: rgba(239, 68, 68, 0.18); color: #f87171; }
-        .category-badge.world-politics { background: rgba(249, 115, 22, 0.18); color: #fb923c; }
-        .category-badge.sports { background: rgba(14, 165, 233, 0.18); color: #38bdf8; }
-        .category-badge.food { background: rgba(251, 146, 60, 0.18); color: #fb923c; }
-        .category-badge.art { background: rgba(236, 72, 153, 0.18); color: #f472b6; }
-        .category-badge.health { background: rgba(20, 184, 166, 0.18); color: #2dd4bf; }
-        .category-badge.bestseller { background: rgba(255, 107, 53, 0.18); color: #ff6b35; }
-        .category-badge.science { background: rgba(34, 211, 238, 0.18); color: #22d3ee; }
-        .category-badge.music { background: rgba(244, 114, 182, 0.18); color: #f472b6; }
-        .category-badge.default { background: rgba(148, 163, 184, 0.15); color: #94a3b8; }
+        .category-badge.technology {
+            background: rgba(59, 130, 246, 0.18);
+            color: #60a5fa;
+        }
+
+        .category-badge.culture {
+            background: rgba(168, 85, 247, 0.18);
+            color: #c084fc;
+        }
+
+        .category-badge.business {
+            background: rgba(34, 197, 94, 0.18);
+            color: #4ade80;
+        }
+
+        .category-badge.finance {
+            background: rgba(234, 179, 8, 0.18);
+            color: #facc15;
+        }
+
+        .category-badge.us-politics {
+            background: rgba(239, 68, 68, 0.18);
+            color: #f87171;
+        }
+
+        .category-badge.world-politics {
+            background: rgba(249, 115, 22, 0.18);
+            color: #fb923c;
+        }
+
+        .category-badge.sports {
+            background: rgba(14, 165, 233, 0.18);
+            color: #38bdf8;
+        }
+
+        .category-badge.food {
+            background: rgba(251, 146, 60, 0.18);
+            color: #fb923c;
+        }
+
+        .category-badge.art {
+            background: rgba(236, 72, 153, 0.18);
+            color: #f472b6;
+        }
+
+        .category-badge.health {
+            background: rgba(20, 184, 166, 0.18);
+            color: #2dd4bf;
+        }
+
+        .category-badge.bestseller {
+            background: rgba(255, 107, 53, 0.18);
+            color: #ff6b35;
+        }
+
+        .category-badge.science {
+            background: rgba(34, 211, 238, 0.18);
+            color: #22d3ee;
+        }
+
+        .category-badge.music {
+            background: rgba(244, 114, 182, 0.18);
+            color: #f472b6;
+        }
+
+        .category-badge.default {
+            background: rgba(148, 163, 184, 0.15);
+            color: #94a3b8;
+        }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .toast {
@@ -391,11 +559,21 @@
             font-size: 0.85rem;
         }
 
-        .toast.show { display: block; animation: slideIn 0.25s ease; }
+        .toast.show {
+            display: block;
+            animation: slideIn 0.25s ease;
+        }
 
         @keyframes slideIn {
-            from { opacity: 0; transform: translateX(80px); }
-            to { opacity: 1; transform: translateX(0); }
+            from {
+                opacity: 0;
+                transform: translateX(80px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         .modal {
@@ -432,7 +610,12 @@
             align-items: center;
         }
 
-        .modal-header h2 { font-size: 1.15rem; display: flex; align-items: center; gap: 0.5rem; }
+        .modal-header h2 {
+            font-size: 1.15rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
         .close-modal {
             color: var(--text-secondary);
@@ -445,14 +628,27 @@
             line-height: 1;
         }
 
-        .close-modal:hover { color: var(--text-primary); }
+        .close-modal:hover {
+            color: var(--text-primary);
+        }
 
-        .modal-body { padding: 1.25rem 1.5rem; overflow-y: auto; }
+        .modal-body {
+            padding: 1.25rem 1.5rem;
+            overflow-y: auto;
+        }
 
-        .skipped-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+        .skipped-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
 
         .skipped-table th,
-        .skipped-table td { text-align: left; padding: 0.85rem; border-bottom: 1px solid var(--border-color); }
+        .skipped-table td {
+            text-align: left;
+            padding: 0.85rem;
+            border-bottom: 1px solid var(--border-color);
+        }
 
         .skipped-table th {
             color: var(--text-secondary);
@@ -462,19 +658,56 @@
             letter-spacing: 0.4px;
         }
 
-        .skipped-table tr:hover { background: rgba(255, 255, 255, 0.02); }
-        .skipped-table a { color: white; text-decoration: none; font-weight: 500; }
-        .skipped-table a:hover { color: var(--accent-primary); }
+        .skipped-table tr:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .skipped-table a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .skipped-table a:hover {
+            color: var(--accent-primary);
+        }
 
         @media (max-width: 768px) {
-            .header h1 { font-size: 1.35rem; }
-            .profiles-grid { grid-template-columns: 1fr; }
-            .controls { flex-direction: column; gap: 0.5rem; }
-            .search-box { width: 100%; max-width: none; }
-            .stats-bar { gap: 0.75rem; }
-            .stat-item { min-width: 70px; padding: 0.4rem 0.6rem; }
-            .stat-value { font-size: 1.25rem; }
-            .modal-content { width: 95%; margin: 8% auto; }
+            .header h1 {
+                font-size: 1.35rem;
+            }
+
+            .profiles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .controls {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .search-box {
+                width: 100%;
+                max-width: none;
+            }
+
+            .stats-bar {
+                gap: 0.75rem;
+            }
+
+            .stat-item {
+                min-width: 70px;
+                padding: 0.4rem 0.6rem;
+            }
+
+            .stat-value {
+                font-size: 1.25rem;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 8% auto;
+            }
         }
 
         .progress-bar {
@@ -507,7 +740,9 @@
             <span id="liveStatus">Live - Auto-refreshing</span>
             <span class="refresh-countdown" id="countdown"></span>
         </div>
-        <div class="progress-bar"><div class="progress-bar-fill" id="progressBar"></div></div>
+        <div class="progress-bar">
+            <div class="progress-bar-fill" id="progressBar"></div>
+        </div>
     </header>
 
     <div class="stats-bar">
@@ -557,9 +792,25 @@
         <select class="select-styled" id="categoryFilter">
             <option value="all">All Categories</option>
         </select>
+        <select class="select-styled" id="platformFilter">
+            <option value="all">All Platforms</option>
+            <option value="twitter">𝕏 Twitter</option>
+            <option value="instagram">📸 Instagram</option>
+            <option value="tiktok">🎵 TikTok</option>
+            <option value="linkedin">💼 LinkedIn</option>
+            <option value="facebook">👤 Facebook</option>
+            <option value="youtube">▶️ YouTube</option>
+            <option value="linktree">🔗 Linktree</option>
+            <option value="threads">🧵 Threads</option>
+            <option value="bluesky">🦋 Bluesky</option>
+            <option value="github">💻 GitHub</option>
+            <option value="medium">📝 Medium</option>
+            <option value="other">🌐 Other</option>
+        </select>
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="Search profiles...">
         </div>
+        <span class="results-count" id="resultsCount">0 results</span>
     </div>
 
     <div class="container">
@@ -598,7 +849,7 @@
     <script>
         const socialIcons = { twitter: '𝕏', instagram: '📸', tiktok: '🎵', linkedin: '💼', facebook: '👤', youtube: '▶️', linktree: '🔗', threads: '🧵', bluesky: '🦋', github: '💻', medium: '📝', other: '🌐' };
         const platformColumns = { 'Twitter': 3, 'Instagram': 4, 'TikTok': 5, 'LinkedIn': 6, 'Facebook': 7, 'YouTube': 8, 'Linktree': 9, 'Threads': 10, 'Bluesky': 11, 'GitHub': 12, 'Medium': 13, 'Other': 14 };
-        
+
         const categoryClasses = {
             'technology': 'technology', 'culture': 'culture', 'business': 'business',
             'finance': 'finance', 'us politics': 'us-politics', 'world politics': 'world-politics',
@@ -616,6 +867,7 @@
         let skippedData = [];
         let currentFilter = 'all';
         let currentCategory = 'all';
+        let currentPlatform = 'all';
         let currentSort = 'newest';
         let lastDataHash = '';
         let lastSkippedHash = '';
@@ -761,12 +1013,18 @@
         function filterProfiles() {
             const searchTerm = document.getElementById('searchInput').value.toLowerCase();
             let filtered = profilesData.filter(p => {
-                const matchesSearch = p.username.toLowerCase().includes(searchTerm) || 
+                const matchesSearch = p.username.toLowerCase().includes(searchTerm) ||
                     Object.keys(p.socialLinks).some(k => k.includes(searchTerm));
                 const matchesFilter = currentFilter === 'all' || p.status === currentFilter;
                 const matchesCategory = currentCategory === 'all' || p.category.toLowerCase() === currentCategory.toLowerCase();
-                return matchesSearch && matchesFilter && matchesCategory;
+                const matchesPlatform = currentPlatform === 'all' || p.socialLinks.hasOwnProperty(currentPlatform);
+                return matchesSearch && matchesFilter && matchesCategory && matchesPlatform;
             });
+
+            // Update results count
+            const resultsCount = document.getElementById('resultsCount');
+            resultsCount.textContent = `${filtered.length} result${filtered.length !== 1 ? 's' : ''}`;
+
             renderProfiles(sortProfiles(filtered));
         }
 
@@ -846,10 +1104,10 @@
         function updateProgress() {
             const progress = document.getElementById('progressBar');
             const countdown = document.getElementById('countdown');
-            
+
             countdownValue -= 0.1;
             if (countdownValue <= 0) countdownValue = refreshInterval / 1000;
-            
+
             const percent = ((refreshInterval / 1000 - countdownValue) / (refreshInterval / 1000)) * 100;
             progress.style.width = percent + '%';
         }
@@ -867,7 +1125,7 @@
         // Filter handlers
         document.querySelectorAll('.filter-btn:not(#viewSkippedBtn)').forEach(btn => {
             btn.addEventListener('click', function () {
-                document.querySelectorAll('.filter-btn:not(#viewSkippedBtn)').forEach(b => 
+                document.querySelectorAll('.filter-btn:not(#viewSkippedBtn)').forEach(b =>
                     b.classList.remove('active', 'active-success', 'active-error'));
                 currentFilter = this.dataset.filter;
                 if (currentFilter === 'accepted') this.classList.add('active-success');
@@ -880,6 +1138,10 @@
         document.getElementById('searchInput').addEventListener('input', filterProfiles);
         document.getElementById('categoryFilter').addEventListener('change', function () {
             currentCategory = this.value;
+            filterProfiles();
+        });
+        document.getElementById('platformFilter').addEventListener('change', function () {
+            currentPlatform = this.value;
             filterProfiles();
         });
         document.getElementById('sortBy').addEventListener('change', function () {
